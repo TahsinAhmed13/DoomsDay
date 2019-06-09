@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DoomsDay Calculator</title>
+    <link rel="icon" href="media/calendar.png" />
+    <style>
+        @font-face {
+            font-family: Azonix;
+            src: url("media/Azonix.otf");
+        }
+
+        body {
+            background-image: url("media/spiral.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #date {
+            width: 100%;
+            height: 20vh;
+            position: relative;
+            top: 22.5vh;
+            text-align: center;
+        }
+
+        #labels {
+            width: 100%;
+            height: 5vh;
+            position: relative;
+            top: 24vh;
+            font-size: 2em;
+            text-align: center;
+            color: rgb(178, 178, 178);
+            font-family: Azonix;
+        }
+
+        #date * {
+            width: 15.5%;
+            height: 30%;
+            font-size: 1.3em;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 20%;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            opacity: 0.85;
+        }
+
+        #month {
+            background-color: #DD0048;
+            border-color: #DD0048;
+        }
+
+        #label_month {
+            position: relative;
+            right: 175px;
+        }
+
+        #day {
+            background-color: #39FF14;
+            border-color: #39FF14;
+        }
+
+        #label_day {
+            position: relative;
+            right: 20px;
+        }
+
+        #year {
+            background-color: #4D4DFF;
+            border-color: #4D4DFF;
+        }
+
+        #label_year {
+            position: relative;
+            left: 157px;
+        }
+
+        #find {
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            background-color: royalblue;
+            color: white;
+            position: relative;
+            left: 44.5%;
+            top: 20vh;
+            border-width: 3px;
+            padding: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="machine.js"></script>
+</head>
+
+<body>
+    <form method="get" action="generator.py">
+        <div id="labels">
+            <span id="label_month">Month</span>
+            <span id="label_day">Day</span>
+            <span id="label_year">Year</span>
+        </div>
+        <div id="date">
+            <input id="month" type="text" name="month" onkeydown="nextMonth(event)" required />
+            <input id="day" type="text" name="day" onkeydown="nextDay(event)" required />
+            <input id="year" type="text" name="year" onkeydown="nextYear(event)" required />
+            <script>
+                var today = new Date();
+                document.getElementById("month").value = today.getMonth() + 1;
+                document.getElementById("day").value = today.getDate();
+                document.getElementById("year").value = today.getFullYear();
+
+                document.getElementById("month").focus(); 
+            </script>
+        </div>
+        <input id="find" type="submit" name="find" value="Go! Go! Go!" />
+    </form>
+</body>
+
+</html>

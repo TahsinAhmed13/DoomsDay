@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DoomsDay Calculator</title>
+    <link rel="icon" href="media/calendar.png" />
+    <style>
+        body {
+            background-color: #1B1B1B;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #cross,
+        #calendar {
+            width: 30%;
+            height: 50vh;
+            position: absolute;
+            left: 35%;
+            top: 25vh;
+        }
+
+        #cross {
+            z-index: 1;
+        }
+
+        #calendar {
+            z-index: -1;
+        }
+
+        h1 {
+            color: white;
+            font-size: 5em;
+            position: absolute;
+            left: 32%;
+        }
+
+        #bottom {
+            top: 75vh;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="media/cross.png" id="cross" />
+    <img src="media/calendar.png" id="calendar" />
+    <h1 id="top">Invalid Date!</h1>
+    <h1 id="bottom">Invalid Date!</h1>
+</body>
+
+</html>
