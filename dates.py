@@ -10,7 +10,7 @@ weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 # month codes: indices are month #, values are the codes
 months = [6, 2, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4]
 # names of the months in order
-mnames = ['Janurary', 'Fedurary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+mnames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 class GregorianDate: 
     def __init__(self, month: int, day: int, year: int): 
